@@ -1,6 +1,7 @@
 import grails.converters.JSON;
 
 import org.apache.tools.ant.filters.StringInputStream
+import org.codehaus.groovy.grails.web.json.JSONArray;
 import org.codehaus.groovy.grails.web.json.JSONElement;
 
 import com.yahoo.platform.yui.compressor.JavaScriptCompressor
@@ -83,10 +84,12 @@ class BundleScripts {
 								
 				for (dir in exec.dirs) {
 					def fileDir = new File(getPathFile(dir.path))
+					
+					JSONArray dirFilesArray = dir.files
 
 					// Se não forem inforamados arquivos, todos os arquivos JS
 					// do diretório em questão serão adicionados
-					if (dir.files == null || dir.files.size == 0) {
+					if (dirFilesArray == null || dirFilesArray.length() == 0) {
 						def files = fileDir.listFiles(FILTER_JS)
 						for (f in files) {
 							appendBuffer(buffer, outputFile, f);
