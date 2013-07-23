@@ -50,17 +50,17 @@ O seguinte código mostra um exemplo da flexibilidade da configuração:
 
 #### Definição de grupo
 A definição de um grupo é representada por cada objeto contido no array dentro do atributo "js", no exemplo
-anterior temos apenas um grupo, que terá como saída o arquivo "all.js"
+anterior temos apenas um grupo, que terá como saída o arquivo "all.js".
 
 #### Atributos do grupo
 Cada grupo pode ter o seguinte conjunto de atributos:
 
 + [String] output: Caminho mais nome do arquivo que será gerado dentro da pasta "webapp/js";
 + [Boolean] compress: Se for true comprime o arquivão utilizando a bilioteca YUICompressor;
-+ [Array] dirs: Array contendo os diretórios que alimentaram o arquivo descrito em "output".
++ [Array] dirs: Array contendo os diretórios que alimentarão o arquivo descrito em "output".
 
 #### Atributos para cada diretório
-Cada diretório deve obrigatoriamente conter o "path" e opcionalmente o atributo "files"
+Cada diretório deve obrigatoriamente conter o "path" e opcionalmente o atributo "files":
 
-+ [String] path: Contém o caminho da pastas tendo como raiz a pasta "webapp/js";
++ [String] path: Contém o caminho da pasta, tendo como raiz a pasta "webapp/js";
 + [Array] files: Um array que contém o nome dos arquivos dentro do "path" que devem ser lidos. Com esse atributo você pode tanto definir a ordem de carregamento (A ordem definida nesse array, é a ordem de adição do arquivo no grupo), como fazer um carregamento seletivo de arquivos. Caso esse atributo tenha um valor nulo ou vazio, todos os arquivos do "path" serão lidos.
