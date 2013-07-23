@@ -1,0 +1,1 @@
+document.getElementById("body").innerHTML += "Arquivo 1 <br />";

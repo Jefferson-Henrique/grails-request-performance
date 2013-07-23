@@ -1,0 +1,21 @@
+{
+	"bundles": {
+		"js": [
+			{
+				"output": "all.js",
+				"compress": true,
+				"dirs": [
+					{
+						"path": "folder1"
+					},
+					{	
+						"path": "folder1/folder2"
+					},
+					{
+						"path": "folder1/folder3"
+					}
+				]
+			}
+		]	
+	}
+}
